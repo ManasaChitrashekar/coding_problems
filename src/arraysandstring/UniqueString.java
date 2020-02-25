@@ -13,10 +13,10 @@ public class UniqueString {
     }
 
     private static boolean isUnique(String string) {
-        boolean[] charSet =new boolean[256];
+        boolean[] charSet =new boolean[128];
         if(string.length()>128)
             return false;
-        for(char c: string.toLowerCase().toCharArray()){
+        for(char c: string.toCharArray()){
             if(charSet[c])
                 return false;
             charSet[c]=true;
