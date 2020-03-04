@@ -2,8 +2,8 @@ package arraysandstring;
 
 public class MedianOfSortedArrays {
     public static void main(String args[]){
-        int[] array1 = new int[]{1,2,3,4,5,6};
-        int[] array2 = new int[]{7,8,9,10,11,12};
+        int[] array1 = new int[]{1,2,3,4,5,6,7};
+        int[] array2 = new int[]{8,9,10,11,12,13};
         System.out.println(median(array1,array2,0,array1.length-1,0,array2.length-1));
 
     }
@@ -16,7 +16,7 @@ public class MedianOfSortedArrays {
         }
 
         int m1Index = (enda +starta)/2;
-        int m2Index = (endb + startb)/2;
+        int m2Index = (endb + startb+1)/2;
 
         int m1 = array1[m1Index];
         int m2 = array2[m2Index];
