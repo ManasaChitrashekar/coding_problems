@@ -45,25 +45,21 @@ public class LinkedList {
      * 2nd approach is o use 2 loops through runner technique implemented below
      */
     public void removeDuplicates() {
-        if(head == null || head.next == null)
-            return;
-        while(head.next!=null)
+        Node cur = head;
+        while(cur!=null)
         {
-            Node runner = head.next;
-            Node prev = head;
+            Node runner = cur;
             while(runner.next!=null){
-                if(head.value == runner.value)
+                if(cur.value == runner.next.value)
                 {
                     runner.next = runner.next.next;
                 }
                 else
                 {
-                    prev = runner;
                     runner = runner.next;
-
                 }
             }
-            head = head.next;
+            cur = cur.next;
         }
         
     }
