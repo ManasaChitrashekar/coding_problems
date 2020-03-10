@@ -122,4 +122,61 @@ public class LinkedList {
         }
         return follower.getValue();
     }
+
+
+    public void deleteNode(int data)
+    {
+        if(head == null)
+            return;
+        //if n is head of the node
+        if(head.getValue() == data){
+            head = head.getNext();
+            return;
+        }
+        Node cur = head;
+        Node prev = new Node(0);
+        while(cur!=null)
+        {
+            if(cur.getValue()==data)
+            {
+
+                cur = cur.getNext();
+                prev.setNext(cur);
+            }
+            else
+            {
+                prev = cur;
+                cur =  cur.getNext();
+            }
+        }
+
+    }
+
+    public void deleteMiddleNode()
+    {
+        if(head == null)
+            return;
+        //if only two nodes dont delete
+        if(head.getNext() == null || head.getNext().getNext()== null){
+            return;
+        }
+        Node cur = head;
+        Node follower = head;
+        Node prev = new Node(0);
+        int counter =0;
+        while(cur!=null && cur.getNext()!=null && cur.getNext().getNext()!=null)
+        {
+            cur = cur.getNext().getNext();
+            prev = follower;
+            follower = follower.getNext();
+            counter = counter+2;
+
+        }
+        //when cur is null we reach end of list
+        //follower reach middle of list, delete follower and make connection using prev node
+       //TODO if even delete 2nd last add counter and check length
+        prev.setNext(follower.getNext());
+        return;
+
+    }
 }
