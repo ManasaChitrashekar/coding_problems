@@ -1,5 +1,7 @@
 package linkedlist;
 
+import common.Node;
+
 public class LinkedList {
     Node head;
 

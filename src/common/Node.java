@@ -1,4 +1,4 @@
-package linkedlist;
+package common;
 
 public class Node {
     private  int value;
