@@ -181,4 +181,24 @@ public class LinkedList {
         return;
 
     }
+
+    public void reverseList() {
+        if(head==null)
+            return;
+        if(head.getNext()==null)
+        return;
+        Node prev= null;
+        Node cur = head;
+        Node next = cur.getNext();
+        while(cur!=null)
+        {
+            next = cur.getNext();
+            cur.setNext(prev);
+            prev = cur;
+            cur = next;
+
+        }
+
+        head = prev;
+    }
 }
