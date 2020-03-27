@@ -35,25 +35,17 @@ public class Node {
 
     boolean contains(int value)
     {
-        boolean found = false;
-        if(value == data)
-            found = true;
-        if(value<= data)
-        {
-            if(left== null)
-                found=  false;
-            else
-                left.contains(value);
+        Node current = this;
+        while(current!=null){
+            if(current.data==value){
+                return true;
+            }else if(value<data){
+                current = current.left;
+            }else{
+                current = current.right;
+            }
         }
-        else
-        {
-            if(right == null)
-                found= false;
-            else
-                right.contains(value);
-        }
-
-        return found;
+        return false;
     }
 
     void inorder()
