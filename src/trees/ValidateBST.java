@@ -26,6 +26,5 @@ public class ValidateBST {
     {
         BstConstruction.BST test = new BstConstruction.BST(10);
         test.insert(5).insert(15);
-        System.out.println(validateBst(test));
     }
 }
