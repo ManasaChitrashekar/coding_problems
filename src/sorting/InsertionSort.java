@@ -1,13 +1,6 @@
 package sorting;
 
 /**
- * [[REPLACE WITH SHORT FILE DESC AND UPDATE WITH ADDITIONAL AUTHORS IF APPLICABLE]]
- * <p/>
- * Created on Sep 21, 2020
- * <br/>
- * Copyright 2020 Cedar CX Technologies
- * <br/>
- *
  * @author mchitrashekar
  */
 public class InsertionSort {
