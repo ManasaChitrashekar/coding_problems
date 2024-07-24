@@ -5,10 +5,10 @@ import common.Node;
 /**
  * @author mchitrashekar
  */
-public class Stack {
+public class StackImpl<C> {
     Node top;
 
-    public Stack() {
+    public StackImpl() {
     }
 
     public void push(int data)
@@ -39,7 +39,7 @@ public class Stack {
     }
 
     public static void main(String args[]){
-        Stack stack = new Stack();
+        StackImpl<Integer> stack = new StackImpl<Integer>();
         stack.push(1);
         stack.push(2);
         stack.push(3);
