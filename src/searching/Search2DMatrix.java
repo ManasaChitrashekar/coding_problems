@@ -4,6 +4,7 @@ package searching;
  * Involves two steps first findinu the row comparing the last and first elemnt of row to target and eliminating rows
  * binary seracg on found row
  * mistake i did - assuming square matrix and not sending colums
+ * i always forget to add else
  */
 public class Search2DMatrix {
     public static boolean searchMatrix(int[][] matrix, int target) {
@@ -15,7 +16,7 @@ public class Search2DMatrix {
             midRow = (top+bottom)/2;
             if(target>matrix[midRow][COLS-1])
                 top = midRow+1;
-            if(target<matrix[midRow][0])
+            else if(target<matrix[midRow][0])
                 bottom = midRow-1;
             else
                 break;
@@ -24,10 +25,10 @@ public class Search2DMatrix {
         if(top>bottom)
             return false;
         else
-            Search2DMatrix.binarySearch(matrix[midRow],target);
-        return false;
+            return Search2DMatrix.binarySearch(matrix[midRow],target);
+
     }
-    public static int binarySearch(int[] array, int target) {
+    public static boolean binarySearch(int[] array, int target) {
         int low = 0;
         int high = array.length-1;
         int mid = 0;
@@ -35,13 +36,13 @@ public class Search2DMatrix {
         {
             mid = (low+high)/2;
             if(target==array[mid])
-                return mid;
+                return true;
             if(target<array[mid])
                 high = mid-1;
             else
                 low = mid+1;
         }
-        return -1;
+        return false;
     }
 
     public static void main(String[] args) {
