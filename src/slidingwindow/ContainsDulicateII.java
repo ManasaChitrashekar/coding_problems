@@ -8,6 +8,8 @@ import java.util.Set;
  * USE SLIDE WINDOW BECAUSE K IS GIVEN AND ASKING CONDITION IN RANGE
  * TEHY ARE ASKING WE NEED TO FIND DISTNICT SO WE NEEED TO USE HASHSET
  * THE CONDITION J-I<=K WAS TRICKY HERE THIS MEANS WINDOWN SIZE IS ACTUALLY K+1;
+ * https://leetcode.com/problems/contains-duplicate-ii/description/
+ * https://www.youtube.com/watch?v=ypn0aZ0nrL4
  */
 public class ContainsDulicateII {
 
